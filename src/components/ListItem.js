@@ -1,23 +1,23 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {completeTodo} from '../actions';
+import {completeTodo} from '../actions/index';
 
 class ListItem extends Component {
   completeClick = completeTodoId => {
-    const {completeToDo} = this.props;
-    completeToDo(completeTodoId);
+    const {completeTodo} = this.props;
+    completeTodo(completeTodoId);
   };
   render() {
     const{todoId, todo} = this.props;
     return (
-      <div key="toDoName" className="col s10 offset-s1 to-do-list-item black">
+      <div key="toDoName" className="">
           <h4>
             {todo.title}
             <span
               onClick={() => this.completeClick(todoId)}
               className="complete-todo-item waves-effect waves-light blue lighten-5 blue-text text-darken-4 btn"
             >
-              <i className="large material-icons">Done</i>
+              <i className="large material-icons">✓</i>
             </span>
           </h4>
   </div>

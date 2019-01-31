@@ -4,7 +4,7 @@ import List from './List';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="container">
         <List/>
       </div>
     );

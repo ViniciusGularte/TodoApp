@@ -26,9 +26,9 @@ class List extends Component {
     const {showForm, formValue} = this.state;
     if (showForm) {
       return (
-        <div id="todo-add-form" className="col s10 offset-s1">
+        <div id="todo-add-form" className="">
           <form onSubmit={this.formSubmit}>
-            <div className="input-field">
+            <div className="">
               <input
                 value={formValue}
                 onChange={this.inputChange}
