@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {completeTodo} from '../actions/index';
+import {completeTodo} from '../../actions/index';
 
 class ListItem extends Component {
   completeClick = completeTodoId => {
@@ -10,14 +10,14 @@ class ListItem extends Component {
   render() {
     const{todoId, todo} = this.props;
     return (
-      <div key="toDoName" className="">
+      <div key="toDoName" className="todoItem">
           <h4>
             {todo.title}
             <span
               onClick={() => this.completeClick(todoId)}
-              className="complete-todo-item waves-effect waves-light blue lighten-5 blue-text text-darken-4 btn"
+              className="todoItem__span"
             >
-              <i className="large material-icons">✓</i>
+              <i className="todoItem__icon">✓</i>
             </span>
           </h4>
   </div>

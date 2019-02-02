@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import _ from 'lodash';
-import * as actions from '../actions';
-import ListItem from './ListItem';
+import * as actions from '../../actions';
+import ListItem from '../listItem/ListItem';
 
 class List extends Component {
   state = {
@@ -26,16 +26,16 @@ class List extends Component {
     const {showForm, formValue} = this.state;
     if (showForm) {
       return (
-        <div id="todo-add-form" className="">
+        <div id="todo-add-form" className="todo__form">
           <form onSubmit={this.formSubmit}>
-            <div className="">
+            <div className="todo__form--input">
               <input
                 value={formValue}
                 onChange={this.inputChange}
                 id="toDoNext"
                 type="text"
               />
-              <label htmlFor="toDoNext">What Next?</label>
+            <label htmlFor="todo__form--label">What Next?</label>
             </div>
           </form>
         </div>
