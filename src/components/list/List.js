@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import _ from 'lodash';
 import * as actions from '../../actions';
 import ListItem from '../listItem/ListItem';
+import './list.scss';
 
 class List extends Component {
   state = {
@@ -29,13 +30,13 @@ class List extends Component {
         <div id="todo-add-form" className="todo__form">
           <form onSubmit={this.formSubmit}>
             <div className="todo__form--input">
+              <h4 className="todo__label">What Next?</h4>
+
               <input
                 value={formValue}
                 onChange={this.inputChange}
-                id="toDoNext"
                 type="text"
               />
-            <label htmlFor="todo__form--label">What Next?</label>
             </div>
           </form>
         </div>
@@ -51,7 +52,7 @@ class List extends Component {
       return toDos;
     }
     return (
-      <div className="col s10 offset-s1 center-align">
+      <div className="todo__form">
         <h4>You have no more things ToDo!</h4>
       </div>
     );
@@ -62,20 +63,20 @@ class List extends Component {
   render() {
     const {showForm} = this.state;
     return (
-      <div className="to-do-list-container">
-        <div className="row">
+      <div className="todo__form">
+        <div className="">
           {this.renderForm()}
           {this.renderToDo()}
         </div>
         <div className="fixed-action-btn">
           <button
             onClick={() => this.setState({showForm: !showForm})}
-            className="btn-floating btn-large black darken-4"
+            className=""
           >
           {showForm ? (
-            <i className="large material-icons">-</i>
+            <i className="">-</i>
           ) : (
-            <i className="large material-icons">+</i>
+            <i className="">+</i>
           )}
           </button>
         </div>
