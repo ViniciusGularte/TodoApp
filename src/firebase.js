@@ -1,12 +1,13 @@
 import * as firebase from 'firebase';
+require('dotenv').config()
 
 const config = {
-  apiKey: "AIzaSyCpyFnDOeTi8R0aOqythf20SdsygsMf65A",
-  authDomain: "todoapp-d740f.firebaseapp.com",
-  databaseURL: "https://todoapp-d740f.firebaseio.com",
-  projectId: "todoapp-d740f",
-  storageBucket: "todoapp-d740f.appspot.com",
-  messagingSenderId: "413317750782"
+  apiKey: process.env.APIKEY,
+  authDomain: process.env.AUTHDOMAIN,
+  databaseURL:  'https://todoapp-d740f.firebaseio.com',
+  projectId:  process.env.PROJECTID,
+  storageBucket:  process.env.STORAGEBUCKET,
+  messagingSenderId: process.env.MESSAGINGSENDERID
 
 }
 firebase.initializeApp(config);

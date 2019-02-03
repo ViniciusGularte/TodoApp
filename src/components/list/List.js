@@ -74,9 +74,9 @@ class List extends Component {
             className=""
           >
           {showForm ? (
-            <i className="">-</i>
+            <i className="">Minimize</i>
           ) : (
-            <i className="">+</i>
+            <i className="">Add more tasks</i>
           )}
           </button>
         </div>

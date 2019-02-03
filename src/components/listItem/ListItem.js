@@ -17,7 +17,7 @@ class ListItem extends Component {
               onClick={() => this.completeClick(todoId)}
               className="todoItem__span"
             >
-              <i className="todoItem__icon">✓</i>
+              <i className="todoItem__icon"><input type="checkbox"></input></i>
             </span>
           </h4>
   </div>
