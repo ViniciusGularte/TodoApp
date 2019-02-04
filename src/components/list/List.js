@@ -33,6 +33,7 @@ class List extends Component {
               <h4 className="todo__label">What Next?</h4>
 
               <input
+                className="todo__input"
                 value={formValue}
                 onChange={this.inputChange}
                 type="text"
