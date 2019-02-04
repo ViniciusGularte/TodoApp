@@ -68,10 +68,10 @@ class List extends Component {
           {this.renderForm()}
           {this.renderToDo()}
         </div>
-        <div className="fixed-action-btn">
+        <div className="">
           <button
             onClick={() => this.setState({showForm: !showForm})}
-            className=""
+            className="btn blue"
           >
           {showForm ? (
             <i className="">Minimize</i>
