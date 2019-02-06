@@ -11,15 +11,10 @@ class ListItem extends Component {
     const{todoId, todo} = this.props;
     return (
       <div key="toDoName" className="todoItem">
-          <h4>
+          <h4  onClick={() => this.completeClick(todoId)}>
             {todo.title}
-            <span
-              onClick={() => this.completeClick(todoId)}
-              className="todoItem__span"
-            >
-              <i className="todoItem__icon"><input type="checkbox"></input></i>
-            </span>
           </h4>
+          <hr></hr>
   </div>
     );
   }
