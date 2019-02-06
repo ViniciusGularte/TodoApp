@@ -11,11 +11,11 @@ class ListItem extends Component {
     const{todoId, todo} = this.props;
     return (
       <div key="toDoName" className="todoItem">
-          <h4  onClick={() => this.completeClick(todoId)}>
+          <h4 className="todoItem__title"  onClick={() => this.completeClick(todoId)}>
             {todo.title}
           </h4>
           <hr></hr>
-  </div>
+      </div>
     );
   }
 }
